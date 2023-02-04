@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FreindController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="800.0">
+         <children>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="445.0" prefWidth="205.0" spacing="15.0" style="-fx-background-color: #fff; -fx-border-color: #6C63FF;">
+               <children>
+                  <Pane prefHeight="145.0" prefWidth="205.0" style="-fx-background-color: #ffff;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="121.0" layoutX="42.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pngegg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Button fx:id="btn_to_home" mnemonicParsing="false" onAction="#to_home" prefHeight="44.0" prefWidth="211.0" style="-fx-background-color: #f1f3f5; -fx-border-radius: 0;" text="Home" textOverrun="CLIP" underline="true" />
+                  <Button fx:id="btn_to_friends" mnemonicParsing="false" onAction="#to_friends" prefHeight="44.0" prefWidth="211.0" style="-fx-background-color: #f1f3f5; -fx-border-radius: 0;" text="Friends" textOverrun="CLIP" underline="true" />
+                  <Button fx:id="btntoProfile" mnemonicParsing="false" onAction="#toProfile" prefHeight="44.0" prefWidth="211.0" style="-fx-background-color: #f1f3f5; -fx-border-radius: 0;" text="Profil" textOverrun="CLIP" underline="true" />
+                  <Button fx:id="btn_to_messages" mnemonicParsing="false" onAction="#to_messages" prefHeight="44.0" prefWidth="211.0" style="-fx-background-color: #f1f3f5; -fx-border-radius: 0;" text="Messages" textOverrun="CLIP" underline="true" />
+               </children>
+            </VBox>
+            <Pane layoutX="215.0" layoutY="10.0" prefHeight="447.0" prefWidth="600.0">
+               <children>
+                  <Pane layoutX="-1.0" prefHeight="67.0" prefWidth="596.0" style="-fx-background-color: #6C63FF;">
+                     <children>
+                        <Label layoutX="22.0" layoutY="20.0" text="Freinds" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ScrollPane layoutY="65.0" prefHeight="384.0" prefWidth="603.0">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="366.0" prefWidth="578.0" spacing="5.0" style="-fx-background-color: #ffff;">
+                                 <children>
+                                    <HBox prefHeight="32.0" prefWidth="538.0">
+                                       <children>
+                                          <TextField fx:id="search_input" prefHeight="27.0" prefWidth="481.0" promptText="search for users" />
+                                          <Button fx:id="search_btn" mnemonicParsing="false" onAction="#search" text="Search" />
+                                       </children>
+                                    </HBox>
+                                    <VBox fx:id="my_friend_vbox" prefHeight="50.0" prefWidth="507.0" spacing="10.0">
+                                       <children>
+                                          <Label text="my friends" />
+                                       </children>
+                                    </VBox>
+                                    <VBox fx:id="friend_vbox" prefHeight="50.0" prefWidth="507.0" spacing="10.0">
+                                       <children>
+                                          <Label text="users list" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
